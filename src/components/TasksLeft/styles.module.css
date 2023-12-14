@@ -1,0 +1,21 @@
+.container {
+    position: relative;
+    /* margin: 0 auto; */
+    width: 250px;
+}
+
+.container p {
+    color: hsl(234, 39%, 85%);
+}
+
+.darkFooter {
+    background-color: hwb(235 15% 76%);
+}
+
+.lightFooter {
+    background-color: white;
+}
+
+.lightFooter p {
+    color: hsl(236, 9%, 61%);
+}

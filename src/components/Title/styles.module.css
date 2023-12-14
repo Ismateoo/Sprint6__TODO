@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    width: 540px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.todoText {
+    color: white;
+    letter-spacing: 15px;
+}
+
+.sunImg:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.moonImg:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 375px) {
+    .container {    
+        width: 350px;
+        padding: 0 10px;  
+    }
+}
