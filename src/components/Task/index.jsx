@@ -7,7 +7,7 @@ export default function Task({theme, id, name, completed, deleteTask, updateTask
         <div>
             <form className={styles.form}>
                 <TaskCheck checked={completed} id={id} updateTask={updateTask}/>
-                <p className={`${styles.task} ${theme == 'dark' ? styles.dark : styles.light}`}>{name}</p>
+                <p className={`${styles.task} ${theme == 'dark' ? styles.dark : styles.light} ${completed == true ? styles.check : ""}`}>{name}</p>
                 <img onClick={() => deleteTask(id)} src={imgCross} alt="" />
             </form>
         </div>

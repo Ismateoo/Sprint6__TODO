@@ -24,15 +24,27 @@ function App() {
   const [tasks, setTasks] = useState([]); // Lista de tareas originales
   const [filters, setFilters] = useState('all'); // Filtros posibles: ['all', 'active', 'completed']
   const [filteredTasks, setFilteredTasks] = useState([]); // Tareas filtradas según el filtro actual
+  const [colorAll, setColorAll] = useState("");
+  const [colorActive, setColorActive] = useState("");
+  const [colorCompleted, setColorCompleted] = useState("");
 
   // Efecto para actualizar las tareas filtradas cuando cambian las tareas o los filtros
   useEffect(() => {
     if (filters === 'all') {
       setFilteredTasks(tasks);
+      setColorAll("blue");
+      setColorActive("");
+      setColorCompleted("");
     } else if (filters === 'active') {
       setFilteredTasks(tasks.filter(t => t.completed === false));
+      setColorAll("");
+      setColorActive("blue");
+      setColorCompleted("");
     } else if (filters === 'completed') {
       setFilteredTasks(tasks.filter(t => t.completed === true));
+      setColorAll("");
+      setColorActive("");
+      setColorCompleted("blue");
     }
   }, [tasks, filters]);
 
@@ -88,7 +100,7 @@ function App() {
         <div className={`${styles.footer} ${theme === 'dark' ? styles.darkFooter : styles.lightFooter}`}>
           <TasksLeft theme={theme} tasks={tasks} />
           <Filters theme={theme} filterAll={filterAll} filterActive={filterActive}
-            filterCompleted={filterCompleted} clearTasks={clearTasks} />
+            filterCompleted={filterCompleted} clearTasks={clearTasks} colorAll={colorAll} colorActive={colorActive} colorCompleted={colorCompleted}/>
         </div>
       </div>
     </main>

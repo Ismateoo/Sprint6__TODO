@@ -16,7 +16,6 @@
 
 .link:hover {
     cursor: pointer;
-    color: white;
 }
 
 .container__AllActiveCompleted{
@@ -38,4 +37,28 @@
 
 .lightFooter a {
     color: hsl(236, 9%, 61%);
+}
+
+@media screen and (max-width: 375px) {
+    .container{
+        position: relative;
+        justify-content: center;
+    }
+
+    .container__AllActiveCompleted{
+        position: absolute;
+        border-radius:5px;
+        top: 50px;
+        left: -160px;
+        height: 45px;
+        width: 330px;
+        margin-right: 80px;         
+        margin: 0px 10px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+              
+    }
+
+    
 }

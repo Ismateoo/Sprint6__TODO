@@ -20,8 +20,9 @@
 
 @media screen and (max-width: 375px) {
     .container {    
-        width: 350px;
+        width: 330px;
         padding: 0 10px;  
+        margin: 0px 10px;
     }
 }
 

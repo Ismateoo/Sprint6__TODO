@@ -57,13 +57,13 @@
     }
 
     .footer {
-        width: 350px;
-        
+        width: 330px;   
         justify-content: space-between;
         align-items: center;
         height: 45px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         position: relative;
+        margin: 0px 10px;
     }
 }
